@@ -62,7 +62,7 @@ public class PatientController {
                        @RequestParam(defaultValue = "") String keyword) {
         if (bindingResult.hasErrors()) return "formPatients";
         patientRepository.save(patient);
-        return "redirect:/index?page="+page+"&keyword="+keyword;
+        return "redirect:/index";
     }
 
     @GetMapping("/editPatient")
